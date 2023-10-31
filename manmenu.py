@@ -8,7 +8,7 @@ def customer_management():
     print("3. Search Customer by ID")
     print("B. Back")
     print("E. End")
-    option = input("Please, insert a valid option (1-3 or E): ")
+    option = input("Please, insert a valid option (1-3, E or B): ")
 
     if option == "1":
         print("You have selected option 1")
@@ -73,7 +73,7 @@ def sensor_management():
     print("3. Search Sensors by ID")
     print("B. Back")
     print("E. End")
-    option = input("Please, insert a valid option (1-3 or E): ")
+    option = input("Please, insert a valid option (1-3, E or B): ")
 
     if option == "1":
         print("You have selected option 1")
@@ -97,7 +97,7 @@ def security_system_management():
     print("3. Search System by ID")
     print("B. Back")
     print("E. End")
-    option = input("Please, insert a valid option (1-3 or E): ")
+    option = input("Please, insert a valid option (1-3, E or B): ")
     if option == "1":
         print("You have selected option 1")
     elif option == "2":
@@ -120,7 +120,7 @@ def sales_management():
     print("3. Search Sale by ID")
     print("B. Back")
     print("E. End")
-    option = input("Please, insert a valid option (1-3 or E): ")
+    option = input("Please, insert a valid option (1-3, E or B): ")
     if option == "1":
         print("You have selected option 1")
     elif option == "2":
@@ -147,7 +147,7 @@ def main_menu():
     print("E. End")
     print("")
 
-    option = input("Please, insert a valid option (1-4 or E): ")
+    option = input("Please, insert a valid option (1-4, E or B): ")
     
     if option=="1":
         customer_management()
