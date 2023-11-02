@@ -37,13 +37,26 @@ def customer_management():
                 print("The field must be 3 or more characters")
             else:
                 x=x-1
-        x=1
-        while x!=0:
-            phone = input("Please introduce your phone number: ")
-            if len(phone)==9:
-                x=x-1
-            else:
-                print("The field must be 9 characters")
+        x=0
+        y=0
+        h=[]
+        phone=input("Introduce your phone number: ")
+        h=phone
+        j=["0","1","2","3","4","5","6","7","8","9"]
+        while x<9:
+	        if len(h)==9:
+		        if y<10:
+			        if j[y]==h[x]:
+				        x=x+1
+				        y=0
+			        else:
+				        y=y+1
+		        else:
+			        print("The field only accepts numbers")
+			        break 
+	        else:
+		        print("The field has to have 9 numbers")
+		        break
 
         print("SUCCESS - the data of the new customer is:")
         print("Name:     ", name)
