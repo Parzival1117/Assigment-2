@@ -40,25 +40,25 @@ def customer_management():
         z=0
 	while z<9:
 		x=0
+		z=0
         	y=0
-        	h=[]
         	phone=input("Introduce your phone number: ")
-        	h=phone
         	j=["0","1","2","3","4","5","6","7","8","9"]
         	while x<9:
-		        if len(h)==9:
+			if len(phone)==9:
 		        	if y<10:
-				        if j[y]==h[x]:
+				        if j[y]==phone[x]:
 				        	x=x+1
+						z=z+1
 				        	y=0
 			        	else:
 					        y=y+1
 		        	else:
 				        print("The field only accepts numbers")
-			        	break 
+			        	x=x+9 
 	        	else:
 			        print("The field has to have 9 numbers")
-		        	break
+		        	x=x+9
 
         print("SUCCESS - the data of the new customer is:")
         print("Name:     ", name)
