@@ -12,53 +12,53 @@ def customer_management():
 
     if option == "1":
         print("You have selected option 1")
-        
+
         name = input("Please introduce your name: ")
-        
+
         surname = input("Please introduce your surname: ")
-        x=1
-        while x!=0:
+        x = 1
+        while x != 0:
             ID = input("Please introduce your ID: ")
-            if ID[len(ID)-1]=="A":
-                 x=x-1
+            if ID[len(ID)-1] == "A":
+                x = x-1
             else:
                 print("The field has to finish with the letter A")
-        x=1
-        while x!=0:
+        x = 1
+        while x != 0:
             adress = input("Please introduce your adress: ")
-            if len(adress)<3:
+            if len(adress) < 3:
                 print("The field must be 3 or more characters")
             else:
-                x=x-1
-        x=1
-        while x!=0:
+                x = x-1
+        x = 1
+        while x != 0:
             town = input("Please introduce your town name: ")
-            if len(town)<3:
+            if len(town) < 3:
                 print("The field must be 3 or more characters")
             else:
-                x=x-1
-        z=0
-	while z<9:
-		x=0
-		z=0
-        	y=0
-        	phone=input("Introduce your phone number: ")
-        	j=["0","1","2","3","4","5","6","7","8","9"]
-        	while x<9:
-			if len(phone)==9:
-		        	if y<10:
-				        if j[y]==phone[x]:
-				        	x=x+1
-						z=z+1
-				        	y=0
-			        	else:
-					        y=y+1
-		        	else:
-				        print("The field only accepts numbers")
-			        	x=x+9 
-	        	else:
-			        print("The field has to have 9 numbers")
-		        	x=x+9
+                x = x-1
+        z = 0
+        while z < 9:
+            x = 0
+            z = 0
+            y = 0
+            phone = input("Introduce your phone number: ")
+            j = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
+            while x < 9:
+                if len(phone) == 9:
+                    if y < 10:
+                        if j[y] == phone[x]:
+                            x = x + 1
+                            z = z + 1
+                            y = 0
+                        else:
+                            y = y + 1
+                    else:
+                        print("The field only accepts numbers")
+                        x = x + 9
+                else:
+                    print("The field has to have 9 numbers")
+                    x = x + 9
 
         print("SUCCESS - the data of the new customer is:")
         print("Name:     ", name)
@@ -78,6 +78,7 @@ def customer_management():
         main_menu()
     else:
         print("Error: invalid option in customer management menu ")
+
 
 def sensor_management():
     print("***************************************************************")
@@ -103,6 +104,7 @@ def sensor_management():
     else:
         print("Error: invalid option in sensor management menu ")
 
+
 def security_system_management():
     print("***************************************************************")
     print("*              Securiry Systems Management Menu               *")
@@ -125,6 +127,7 @@ def security_system_management():
         main_menu()
     else:
         print("Error: invalid option in sensor management menu ")
+
 
 def sales_management():
     print("***************************************************************")
@@ -149,6 +152,7 @@ def sales_management():
     else:
         print("Error: invalid option in sensor management menu ")
 
+
 def main_menu():
 
     print("***************************************************************")
@@ -163,17 +167,17 @@ def main_menu():
     print("")
 
     option = input("Please, insert a valid option (1-4, E or B): ")
-    
-    if option=="1":
+
+    if option == "1":
         customer_management()
 
-    elif option=="2":
+    elif option == "2":
         sensor_management()
 
-    elif option=="3":
+    elif option == "3":
         security_system_management()
 
-    elif option=="4":
+    elif option == "4":
         sales_management()
 
     elif option == "E" or option == "e":
@@ -181,5 +185,6 @@ def main_menu():
     else:
         print("Error: invalid option in main menu ")
         main_menu()
+
 
 main_menu()
