@@ -1,3 +1,4 @@
+
 def customer_management():
 
     print("***************************************************************")
@@ -14,8 +15,24 @@ def customer_management():
         print("You have selected option 1")
 
         name = input("Please introduce your name: ")
+        numbers = ["0", "1,", "2", "3", "4", "5", "6", "6", "7", "8", "9"]
+        flag_name = True
+        for a in name:
+            for p in numbers:
+                if a == p:
+                    flag_name = False
+        if flag_name == False:
+            print("You can not enter a number")
 
         surname = input("Please introduce your surname: ")
+        numbers = ["0", "1,", "2", "3", "4", "5", "6", "6", "7", "8", "9"]
+        flag_name = True
+        for a in surname:
+            for p in numbers:
+                if a == p:
+                    flag_name = False
+        if flag_name == False:
+            print("You can not enter a number")
         x = 1
         while x != 0:
             ID = input("Please introduce your ID: ")
@@ -80,13 +97,14 @@ def customer_management():
         print("Error: invalid option in customer management menu ")
 
 
-def sensor_management():
+def management_menus(section):
     print("***************************************************************")
-    print("*                  Sensors Management Menu                    *")
+    print("*                  " + section +
+          " Management Menu                    *")
     print("***************************************************************")
-    print("1. New Sensor")
-    print("2. Print Sensors")
-    print("3. Search Sensors by ID")
+    print("1. New", section)
+    print("2. Print", section)
+    print("3. Search ", section, " by ID")
     print("B. Back")
     print("E. End")
     option = input("Please, insert a valid option (1-3, E or B): ")
@@ -99,54 +117,6 @@ def sensor_management():
         print("You have selected option 3")
     elif option == "E" or option == "e":
         print("You have selected to exit from the sensor management menu")
-    elif option == "B" or option == "b":
-        main_menu()
-    else:
-        print("Error: invalid option in sensor management menu ")
-
-
-def security_system_management():
-    print("***************************************************************")
-    print("*              Securiry Systems Management Menu               *")
-    print("***************************************************************")
-    print("1. New System")
-    print("2. Print Systems")
-    print("3. Search System by ID")
-    print("B. Back")
-    print("E. End")
-    option = input("Please, insert a valid option (1-3, E or B): ")
-    if option == "1":
-        print("You have selected option 1")
-    elif option == "2":
-        print("You have selected option 2")
-    elif option == "3":
-        print("You have selected option 3")
-    elif option == "E" or option == "e":
-        print("You have selected to exit from the security_system_management menu")
-    elif option == "B" or option == "b":
-        main_menu()
-    else:
-        print("Error: invalid option in sensor management menu ")
-
-
-def sales_management():
-    print("***************************************************************")
-    print("*                   Sales Management Menu                     *")
-    print("***************************************************************")
-    print("1. New Sale")
-    print("2. Print Sales")
-    print("3. Search Sale by ID")
-    print("B. Back")
-    print("E. End")
-    option = input("Please, insert a valid option (1-3, E or B): ")
-    if option == "1":
-        print("You have selected option 1")
-    elif option == "2":
-        print("You have selected option 2")
-    elif option == "3":
-        print("You have selected option 3")
-    elif option == "E" or option == "e":
-        print("You have selected to exit from the sales_management menu")
     elif option == "B" or option == "b":
         main_menu()
     else:
@@ -172,13 +142,13 @@ def main_menu():
         customer_management()
 
     elif option == "2":
-        sensor_management()
+        management_menus("sensor")
 
     elif option == "3":
-        security_system_management()
+        management_menus("systems")
 
     elif option == "4":
-        sales_management()
+        management_menus("sales")
 
     elif option == "E" or option == "e":
         print("You have selected to exit from the main menu")
